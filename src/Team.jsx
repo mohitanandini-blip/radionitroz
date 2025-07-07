@@ -780,8 +780,8 @@ export default function TeamPage() {
             >
               <span className="tab-text">
                 {group === "faculty" && "Faculty Advisor"}
-                {group === "fourthYear" && "Senior Team"}
-                {group === "thirdYear" && "Core Team"}
+                {group === "fourthYear" && "Office Bearers"}
+                {group === "thirdYear" && "Senior Team"}
                 {group === "secondYear" && "Junior Team"}
               </span>
               <div className="tab-highlight" />
