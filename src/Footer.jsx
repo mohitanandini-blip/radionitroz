@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="footer-section">
+        <div className="footer-section contact-section ">
           <h3>Contact Us</h3>
           <ul className="contact-info">
             <li>

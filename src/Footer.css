@@ -1,6 +1,7 @@
 
 .footer {
   /* Modified gradient - darker and more opaque to distinguish from main content */
+  padding: 1.5rem 0 0 ;
 
 background: linear-gradient(
   135deg,
@@ -36,12 +37,12 @@ background: linear-gradient(
 
 
 .footer-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-section h3 {
   color: #f39c12;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
   position: relative;
   padding-bottom: 0.5rem;
@@ -96,17 +97,28 @@ background: linear-gradient(
 .social-icons a:hover {
   color: #f39c12;
 }
-
+.contact-section {
+  margin-bottom: 1rem;
+}
+.contact-section h3 {
+  margin-bottom: 0.5rem;
+}
 .contact-info li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   margin-bottom: 0.8rem;
 }
-
+.contact-section.contact-info {
+  margin-top: 0;
+  /* remove extra space above the list */
+  margin-top: 0;
+  list-style: none;
+}
 .contact-info svg {
   color: #f39c12;
-  min-width: 20px;
+  min-width: 20 px;
 }
 
 .map-container {

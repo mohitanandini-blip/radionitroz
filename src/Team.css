@@ -305,7 +305,7 @@
 .contact-item {
   display: flex;
   align-items: center;
-  margin-top: 1.2rem;
+  margin-top: 1.2 rem;
   margin-bottom: 0.8rem;
   padding: 0.8rem;
   background: rgba(108, 99, 255, 0.1);
