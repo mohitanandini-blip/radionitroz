@@ -73,7 +73,7 @@ const Footer = () => {
           <ul className="contact-info">
             <li>
               <FaMapMarkerAlt /> National Institute of Technology,<br />
-              MG Avenue, Durgapur, West Bengal, India
+              MG Avenue, Durgapur, West Bengal, 713209, India,
             </li>
             <li>
               <FaEnvelope /> radionitroz.nitdgp@gmail.com

@@ -194,7 +194,7 @@
   transition: filter 0.3s ease;
 }
 .card:hover .card-blur-area {
-  filter: blur(3px);
+  filter: blur(5px);
 }
 .card-front, .card-back {
   position: absolute;
