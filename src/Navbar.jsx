@@ -40,7 +40,7 @@ const Navbar = () => {
 
     // If navigating to a different page
     if (location.pathname !== path) {
-      if (path === '/sponsors' || path === '/alumni' || path === '/team' || path === '/home') {
+      if (path === '/sponsors' || path=='/feedback'|| path === '/alumni' || path === '/team' || path === '/home') {
         // For sponsor/alumni/team pages, scroll to top after navigation
         navigate(path, { state: { scrollToTop: true } });
       } else {
@@ -118,6 +118,16 @@ const Navbar = () => {
                 <span className="nav-indicator"></span>
               </Link>
             </li>
+             <li>
+              <Link
+                to="/feedback"
+                onClick={() => handleNavClick('feedback', '/feedback')}
+                className={activeSection === 'feedback' ? 'active' : ''}
+              >
+                Feedback
+                <span className="nav-indicator"></span>
+              </Link>
+            </li>
             <li>
               <Link
                 to="https://wavecraze.radionitroz.in/"
@@ -128,6 +138,7 @@ const Navbar = () => {
                 <span className="nav-indicator"></span>
               </Link>
             </li>
+           
           </ul>
         </nav>
       </div>

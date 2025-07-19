@@ -1,0 +1,295 @@
+/* FeedbackCard.css */
+
+:root {
+  --primary-color: rgba(100, 108, 255, 0.9);
+  --secondary-color: rgba(238, 0, 255, 0.9);
+  --accent-color: rgba(255, 82, 193, 0.7);
+  --text-color: rgba(255, 255, 255, 0.95);
+  --bg-color: rgba(15, 23, 42, 0.75);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --glow-color: rgba(100, 108, 255, 0.3);
+}
+
+.feedback-card {
+  max-width: 640px;
+  margin: 8rem auto 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, var(--bg-color), rgba(15, 23, 42, 0.6));
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 40px 0 var(--shadow-color);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-color);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+.feedback-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at center, var(--glow-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: -1;
+}
+
+.feedback-card:hover .card-glow {
+  opacity: 0.6;
+}
+
+.card-header {
+  padding: 1.75rem 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0.1) 0%, 
+    rgba(255,255,255,0.05) 50%, 
+    rgba(255,255,255,0.1) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.card-header:hover::before {
+  transform: translateX(100%);
+}
+
+.header-content {
+  flex: 1;
+  z-index: 1;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.title-text {
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.4s ease;
+}
+
+.card-header:hover .title-underline {
+  width: 100%;
+}
+
+.card-subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.toggle-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card-header:hover .icon-circle {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.toggle-icon svg {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feedback-card.expanded .toggle-icon svg {
+  transform: rotate(180deg);
+}
+
+.card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feedback-card.expanded .card-body {
+  max-height: 800px;
+  padding: 2rem;
+}
+
+.form-container {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+}
+
+.google-form {
+  width: 100%;
+  height: 500px;
+  border: none;
+  background: transparent;
+}
+
+.footer-note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.security-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 212, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.security-badge svg {
+  color: rgba(0, 212, 255, 0.9);
+}
+
+.security-text {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  left: var(--left);
+  top: -10px;
+  animation: float-down var(--duration) linear var(--delay) infinite;
+  filter: blur(0.5px);
+}
+
+@keyframes float-down {
+  to {
+    transform: translateY(calc(100% + 10px));
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feedback-card {
+    margin: 6rem 1.5rem 3rem;
+    border-radius: 16px;
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+  }
+  
+  .feedback-card.expanded .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-card {
+    margin: 5rem 1rem 2rem;
+  }
+  
+  .card-header {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .feedback-card.expanded .card-body {
+    padding: 1.25rem;
+  }
+  
+  .google-form {
+    height: 400px;
+  }
+}
