@@ -71,7 +71,7 @@ const Home = () => {
       <div className="container">
         <div className={`home-content ${isVisible ? "visible" : ""}`}>
           <div className="home-text">
-            <h1 className="main-title">Radio Nitroz</h1>
+            <h1 className="main-title">Radio Nitroz</h1><br />
 
             <h2 className="subtitle-typewriter">
               {subtitleText}

@@ -154,8 +154,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+ 
 }
-
+.card-grid:has(.card:only-child) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .card {
   position: relative;
   aspect-ratio: 0.8;

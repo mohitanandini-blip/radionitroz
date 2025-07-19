@@ -78,9 +78,7 @@ const Footer = () => {
             <li>
               <FaEnvelope /> radionitroz.nitdgp@gmail.com
             </li>
-            <li>
-              <FaClock /> Mon-Fri: 9AM - 5PM
-            </li>
+            
           </ul>
         </div>
 
