@@ -114,7 +114,7 @@
 @font-face {
   
   font-family: 'Dune Rise',sans-serif;
-  src: url('/fonts/Dune_Rise.ttf') format('truetype');
+  src: url('./font/Dune_Rise.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
