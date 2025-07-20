@@ -8,7 +8,13 @@
   --facebook: #1877F2;
   --instagram: #E1306C;
 }
-
+@font-face {
+  
+  font-family: 'Dune Rise';
+  src: url('./font/Dune_Rise.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .home-section {
   min-height: 100vh;
   display: flex;
@@ -48,7 +54,7 @@
 
 .main-title {
   font-size: 5.86rem;
-  font-family: 'Dune Rise',sans-serif;
+  font-family: 'Dune Rise';
   
   font-weight: 700;
   line-height: 1.2;
@@ -111,13 +117,7 @@
   opacity: 0;
   animation: fadeInFromLeft 0.8s ease-out forwards;
 }
-@font-face {
-  
-  font-family: 'Dune Rise',sans-serif;
-  src: url('./font/Dune_Rise.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
+
 .subtitle-typewriter {
   font-size: 1rem;
  font-family: 'Space Mono', monospace;
