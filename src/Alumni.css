@@ -26,16 +26,16 @@
   font-size: 1.1rem;
 }
 
-.tree-container {
+.puzzel-container {
   position: relative;
   height: auto;
   width: fit-content; /* optional: adapts to content width */
   aspect-ratio: 103/60;
   margin: 1.5rem auto;
-  padding: 1rem;
+  
 
   /* Glassmorphism styles */
-  background: linear-gradient(135deg, #1a0a1c 0%, #31165d 50%, #000000 100%); /* semi-transparent */
+
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(191, 191, 200, 0.37);
   backdrop-filter: blur(20px); /* for blur effect */
@@ -43,25 +43,12 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-
-.tree-svg {
-  width: 100%;
+.puzzel{
+ width: 100%;
   height: 100%;
-  min-height: 300px;
+  min-height: 350px;
   filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
 }
-
-.tree {
-  fill: #6c5353;
-  stroke: #4a3a3a;
-  stroke-width: 0.5;
-}
-
-.leaf {
-  fill: #9bd230;
-  opacity: 0.8;
-}
-
 .year-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +72,23 @@
   min-width: 70px;
  
 }
-
+.puzzel-path {
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 1.0s linear forwards;
+}
+.puzzel-path.pink {
+  stroke: #FF2FFF;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+.puzzel-path.aqua {
+  stroke: #00BFFF;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
 .year-button:hover {
   background-color: #f0f8e8;
 }
