@@ -122,8 +122,8 @@
 }
 
 .member-photo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -143,8 +143,8 @@
 }
 
 .member-avatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(75, 9, 167, 0.8), rgba(212, 49, 160, 0.8));
   color: white;
@@ -183,8 +183,8 @@
   
   .member-photo,
   .member-avatar {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     font-size: 1.3rem;
   }
 }
@@ -209,8 +209,8 @@
   
   .member-photo,
   .member-avatar {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     font-size: 1.2rem;
   }
   
@@ -227,8 +227,8 @@
   
   .member-photo,
   .member-avatar {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     font-size: 1rem;
   }
   
@@ -236,9 +236,7 @@
     font-size: 0.7rem;
   }
   
-  .year-buttons {
-    gap: 0.3rem;
-  }
+  
   
   .alumni-details {
     padding: 1rem;
