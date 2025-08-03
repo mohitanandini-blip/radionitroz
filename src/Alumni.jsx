@@ -1,7 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Alumni.css";
-
+import shubham from "../src/assets/images/alumni/shubham.jpeg";
+import nabina from "../src/assets/images/alumni/nabina.jpg";
+import vineet from "../src/assets/images/alumni/vineet.jpeg";
+import aniket from "../src/assets/images/alumni/Aniket.jpg";
+import priyal from "../src/assets/images/alumni/priyal.jpeg";
+import kens from "../src/assets/images/alumni/kens.jpeg";
+import Debashish from "../src/assets/images/alumni/Debashish.jpg";
+import basab from"../src/assets/images/alumni/basab.jpeg";
+import dharma from"../src/assets/images/alumni/dharma.jpeg";
+import sumit from"../src/assets/images/alumni/sumit.jpeg";
+import rajeev from"../src/assets/images/alumni/rajeev.jpeg";
+const photoImports = {
+    "shubham.jpeg": shubham,
+    "nabina.jpg": nabina,
+    "vineet.jpeg": vineet,
+    "Aniket.jpg": aniket,
+    "priyal.jpeg": priyal,
+    "kens.jpeg": kens,
+	"Debashish.jpg":Debashish,
+	"basab.jpeg":basab,
+	"dharma.jpeg":dharma,
+	"sumit.jpeg": sumit,
+	"rajeev.jpeg":rajeev,
+    // Add other photo imports here
+  };
 const Alumni = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const location = useLocation();
@@ -11,24 +35,139 @@ const Alumni = () => {
   }, [location.pathname]);
 
   // Manually editable alumni data
-  const alumniData = {
-    2008: ["Arjun Mehra", "Piyush Chitkara", "Santhosh", "Sangeet Somakumar", "Arun Krishnamoorthy"],
-    2009: ["Samrat Chakravorty", "Deepu", "Anil Nagpal"],
-    2011: ["Shankaransh Srivastava", "Anubhav Mehta", "Swati Gorade", "Sanghamitra Das", "Arpita Banerjee"],
-    2012: ["Sandhya", "Varsha Gupta", "Vasu Ireni", "Ria Baki Lalu"],
-    2014: ["Keshav Gupta", "Harshit Arya", "Anjali Mathur"],
-    2015: ["Shivang Singh", "Jitendra Kushram"],
-    2016: ["Pallavi Chaurasia", "Anupam Anand", "Himanshu", "R Sanish", "Aman Kumar", "Shivang", "M Ramsundharsan", "Abhijith T", "S H Nilofer Maideen", "Swathi Mehta"],
-    2017: ["Ahmed Meeran", "Kavishaq Agarwal", "Rishabh Pankaj", "Vivek Kumar Singh", "Gaurav Agarwal", "Diksha Dubey", "B Harika", "Rahul Ranjan"],
-    2018: ["Mahesh Nayak", "Pooja Maurya", "Nithin Thomas", "Jyoti Singh", "Ujas B Nandasana", "Chetender Chauhan"],
-    2019: ["Nancy", "Rahul Singh", "Sarwani Kumari", "Hema Maurya", "Swarnendu Mondal", "Chandan Tyagi"],
-    2020: ["Anshu Kumari", "Kunal D Dekate", "S Hariharan", "Aryaman Panda", "Sanhita Pal", "Sayoni Shah", "Nitika Mondal", "Sachin K Yadav"],
-    2022: ["Arjya Singh Roy", "Ankita Singha", "Gourab Mondal", "Sayantan Maity", "Kiran P Abraham", "Pavan Preetham"],
-    2021: ["Kuldeep Suthar", "Pooja Yadav", "Pratik Biswas", "Gaurav Dogra", "kritika Gora", "Saurav Das", "Amit Dalai", "Ashish Kumar"],
-    2023: ["Sonali Sah", "Aditya Gupta", "Ayush Chaudary", "Ayush Singh", "Aditi Gedam", "Praghya Kumari"],
-    2024: ["Dhiraj Kumar", "Akshay A Baiju", "Priyanshu Burman", "Kalyan Choubey", "Ashish Raj", "Amool Khudia", "Sumit Kumar Sah", "Sankalp Mishra"],
-    2025: ["Shubham Ghosh", "Nabina Layek", "Debashish Panigrahi", "Vineet Jeengar", "Rajeev Yadav", "Aniket Kamble", "Sumit Rastogi", "Priyal Bhalero", "Dharma Teja", "Basab Lekri", "Kens Venkateswaralu"],
-  };
+ const alumniData = {
+  2008: [
+    { name: "Arjun Mehra", },
+    { name: "Piyush Chitkara" },
+    { name: "Santhosh" },
+    { name: "Sangeet Somakumar", },
+    { name: "Arun Krishnamoorthy" }
+  ],
+  2009: [
+    { name: "Samrat Chakravorty", },
+    { name: "Deepu" },
+    { name: "Anil Nagpal" }
+  ],
+  2011: [
+    { name: "Shankaransh Srivastava", },
+    { name: "Anubhav Mehta" },
+    { name: "Swati Gorade" },
+    { name: "Sanghamitra Das" },
+    { name: "Arpita Banerjee" }
+  ],
+  2012: [
+    { name: "Sandhya", },
+    { name: "Varsha Gupta" },
+    { name: "Vasu Ireni" },
+    { name: "Ria Baki Lalu" }
+  ],
+  2014: [
+    { name: "Keshav Gupta", },
+    { name: "Harshit Arya" },
+    { name: "Anjali Mathur" }
+  ],
+  2015: [
+    { name: "Shivang Singh",},
+    { name: "Jitendra Kushram" }
+  ],
+  2016: [
+    { name: "Pallavi Chaurasia",},
+    { name: "Anupam Anand" },
+    { name: "Himanshu" },
+    { name: "R Sanish" },
+    { name: "Aman Kumar" },
+    { name: "Shivang" },
+    { name: "M Ramsundharsan" },
+    { name: "Abhijith T" },
+    { name: "S H Nilofer Maideen" },
+    { name: "Swathi Mehta",}
+  ],
+  2017: [
+    { name: "Ahmed Meeran",},
+    { name: "Kavishaq Agarwal" },
+    { name: "Rishabh Pankaj" },
+    { name: "Vivek Kumar Singh" },
+    { name: "Gaurav Agarwal" },
+    { name: "Diksha Dubey" },
+    { name: "B Harika" },
+    { name: "Rahul Ranjan" }
+  ],
+  2018: [
+    { name: "Mahesh Nayak",},
+    { name: "Pooja Maurya" },
+    { name: "Nithin Thomas" },
+    { name: "Jyoti Singh" },
+    { name: "Ujas B Nandasana" },
+    { name: "Chetender Chauhan" }
+  ],
+  2019: [
+    { name: "Nancy",},
+    { name: "Rahul Singh" },
+    { name: "Sarwani Kumari" },
+    { name: "Hema Maurya" },
+    { name: "Swarnendu Mondal" },
+    { name: "Chandan Tyagi" }
+  ],
+  2020: [
+    { name: "Anshu Kumari"},
+    { name: "Kunal D Dekate" },
+    { name: "S Hariharan" },
+    { name: "Aryaman Panda" },
+    { name: "Sanhita Pal" },
+    { name: "Sayoni Shah" },
+    { name: "Nitika Mondal" },
+    { name: "Sachin K Yadav" }
+  ],
+  2022: [
+    { name: "Arjya Singh Roy",},
+    { name: "Ankita Singha" },
+    { name: "Gourab Mondal" },
+    { name: "Sayantan Maity" },
+    { name: "Kiran P Abraham" },
+    { name: "Pavan Preetham" }
+  ],
+  2021: [
+    { name: "Kuldeep Suthar", },
+    { name: "Pooja Yadav" },
+    { name: "Pratik Biswas" },
+    { name: "Gaurav Dogra" },
+    { name: "kritika Gora" },
+    { name: "Saurav Das" },
+    { name: "Amit Dalai" },
+    { name: "Ashish Kumar" }
+  ],
+  2023: [
+    { name: "Sonali Sah", },
+    { name: "Aditya Gupta" },
+    { name: "Ayush Chaudary" },
+    { name: "Ayush Singh" },
+    { name: "Aditi Gedam" },
+    { name: "Praghya Kumari" }
+  ],
+  2024: [
+    { name: "Dhiraj Kumar",},
+    { name: "Akshay A Baiju" },
+    { name: "Priyanshu Burman" },
+    { name: "Kalyan Choubey" },
+    { name: "Ashish Raj" },
+    { name: "Amool Khudia" },
+    { name: "Sumit Kumar Sah" },
+    { name: "Sankalp Mishra" }
+  ],
+  2025: [
+    { name: "Shubham Ghosh", photo: "shubham.jpeg" },
+    { name: "Nabina Layek", photo: "nabina.jpg" },
+    { name: "Debashish Panigrahi" ,photo: "Debashish.jpg"},
+    { name: "Vineet Jeengar", photo: "vineet.jpeg" },
+    { name: "Rajeev Yadav",photo: "rajeev.jpeg" },
+    { name: "Aniket Kamble", photo: "Aniket.jpg" },
+    { name: "Sumit Rastogi",photo: "sumit.jpeg" },
+    { name: "Priyal Bhalero", photo: "priyal.jpeg" },
+    { name: "Dharma Teja",photo: "dharma.jpeg" },
+    { name: "Basab Lekri",photo: "basab.jpeg" },
+    { name: "Kens Venkateswaralu", photo: "kens.jpeg" }
+  ]
+};
 
   // Extract and sort years (descending)
   const years = Object.keys(alumniData).sort((a, b) => b - a);
@@ -258,20 +397,10 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient 
-    id="SVGID_3_" 
-    gradientUnits="userSpaceOnUse" 
-    x1="52.7567" 
-    y1="213.2002" 
-    x2="86.6505" 
-    y2="213.2002"
->
-    <stop offset="0" stopColor="#22006A" />
-    <stop offset="1" stopColor="#FF00A0" />
-</linearGradient>
-	<path fill="url(#SVGID_3_)" d="M52.91,198.94l12.14,0.01c0,0,0.85,4.05,5.14,3.98c4.3-0.07,4.42-3.86,4.42-3.86l12.04-0.14
+	<path fill="#A020F0" d="M52.91,198.94l12.14,0.01c0,0,0.85,4.05,5.14,3.98c4.3-0.07,4.42-3.86,4.42-3.86l12.04-0.14
 		l-0.1,28.27l-9.36,0.27c0,0,0.4-4.78-4.31-4.86s-4.33,4.37-4.33,4.37s-11.16-2.62-15.79-10.26L52.91,198.94z"/>
-	<g>
+	<g
+	onClick={() => setSelectedYear(2008)}>
 		<path fill="#F2F2F2" d="M65.75,210.8c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
 			v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V210.8z"/>
 		<path fill="#F2F2F2" d="M71.23,216.52c0,0.56-0.28,0.84-0.83,0.84h-2.86c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -293,17 +422,8 @@ style={{
     transform: selectedYear === 2009 ? "scale(1.02)" : "scale(1)",
     transformOrigin: "center" // Ensures scaling happens from the center
   }}>
-	<linearGradient
-   id="SVGID_4_"
-   gradientUnits="userSpaceOnUse" 
-   x1="52.8749" 
-   y1="186.5136" 
-   x2="86.5474" 
-   y2="186.5136">
-		<stop  offset="0" stop-color="#22006A" />
-		<stop  offset="1" stop-color="#FF00A0" />
-	</linearGradient>
-	<path fill="url(#SVGID_4_)" d="M53.35,172.31l11.03-0.19c0,0-0.01,3.32,4.31,3.7c4.33,0.38,5.22-3.7,5.22-3.7l12.62-0.36
+
+	<path fill="#A020F0" d="M53.35,172.31l11.03-0.19c0,0-0.01,3.32,4.31,3.7c4.33,0.38,5.22-3.7,5.22-3.7l12.62-0.36
 		l0.01,25.52l-13.14-0.01c0,0-0.06,4.06-3.56,4.01s-2.83-3.91-2.83-3.91l-14.14-0.23L53.35,172.31z"/>
 	<g>
 		<path fill="#FFFFFF" d="M65.75,182.52c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
@@ -325,17 +445,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient 
-  id="SVGID_5_" 
-  gradientUnits="userSpaceOnUse" 
-  x1="52.857" 
-  y1="159.3673" 
-  x2="91.2867" 
-  y2="159.3673">
-		<stop  offset="0" stop-color="#22006A"/>
-		<stop  offset="0.8685" stop-color="#FF00A0"/>
-	</linearGradient>
-	<path fill="url(#SVGID_5_)" d="M52.91,144.51l-0.05,25.33l0.32,0.24h13.13c0,0-0.92,3.14,2.82,4.03c3.73,0.9,3.14-3.83,3.14-3.83
+	
+	<path fill="#A020F0" d="M52.91,144.51l-0.05,25.33l0.32,0.24h13.13c0,0-0.92,3.14,2.82,4.03c3.73,0.9,3.14-3.83,3.14-3.83
 		l14.28-0.45l0.22-0.3l0.07-10.88c0,0,0.57-2.71,4.32-3.78l0.13-9.72l-0.51-0.4l-15.17,0.23c0,0-0.6,3.51-4.72,4.34
 		c0,0-4.17-1.05-5.19-4.39L52.91,144.51z"/>
 	<g>
@@ -356,16 +467,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="53.1815" y1="129.9182" x2="95.4595" y2="129.9182">
-		<stop  offset="0.1205"  stop-color= "#22006A"/>
-		<stop  offset="0.1843" stop-color= "#2B006C"/>
-		<stop  offset="0.2893" stop-color="#440072"/>
-		<stop  offset="0.4224" stop-color="#6C007C"/>
-		<stop  offset="0.5784" stop-color="#A5008A"/>
-		<stop  offset="0.7517" stop-color="#EB009B"/>
-		<stop  offset="0.7969" stop-color="#FF00A0"/>
-	</linearGradient>
-	<path fill="url(#SVGID_6_)" d="M56.93,118.12l21.78-0.95c0,0,0.31-4.76,3.35-4.64c3.03,0.13,3.77,4.66,3.77,4.66l5.29,0.23
+	
+	<path fill="#A020F0" d="M56.93,118.12l21.78-0.95c0,0,0.31-4.76,3.35-4.64c3.03,0.13,3.77,4.66,3.77,4.66l5.29,0.23
 		l0.26,10.31c0,0,3.69,0.2,4.06,2.94c0.37,2.75-4.07,3.71-4.07,3.71l-0.27,8.3l-17.18,0.26c0,0,1.31,3.59-2.4,4.3
 		c-3.71,0.71-3.96-4.32-3.96-4.32l-14,0.04l-0.38-6.6c0,0,2.07,0.58,2.94-4.07C56.12,132.28,55.2,120.63,56.93,118.12z"/>
 	<g>
@@ -385,11 +488,8 @@ style={{
     transform: selectedYear === 2014 ? "scale(1.02)" : "scale(1)",
     transformOrigin: "center" // Ensures scaling happens from the center
   }}>
-	<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="60.8896" y1="95.3964" x2="100.4698" y2="95.3964">
-		<stop  offset="0.0307" stop-color="#22006A"/>
-		<stop  offset="1" stop-color="#FF00A0"/>
-	</linearGradient>
-	<path fill="url(#SVGID_7_)" d="M77.76,77.81c-0.72,1.12,3.98-6,2.99,0.62c-0.99,6.62,0,0,0,0l2.28,6.18
+
+	<path fill="#A020F0" d="M77.76,77.81c-0.72,1.12,3.98-6,2.99,0.62c-0.99,6.62,0,0,0,0l2.28,6.18
 		c0.26,0.71,0.93,1.18,1.69,1.18h10.46c0.97,0,1.77,0.77,1.8,1.74l0.25,8.07c0.02,0.79,0.57,1.45,1.33,1.68
 		c0.88,0.26,1.88,0.96,1.92,2.81c0.04,1.82-0.96,2.45-1.85,2.64c-0.81,0.18-1.37,0.94-1.37,1.78l-0.02,9.45
 		c0,0.18-0.03,0.37-0.08,0.54l-0.24,0.74l-8.53-0.09c-0.74-0.01-1.39-0.48-1.66-1.17c-0.49-1.23-1.63-3.01-4.18-3.17
@@ -416,13 +516,8 @@ style={{
   }}
 >
 
-	<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="85.0558" y1="70.8562" x2="121.9223" y2="70.8562">
-		<stop  offset="0" stop-color="#FF00A0"/>
-		<stop  offset="0.3505" stop-color= "#AD008C"/>
-		<stop  offset="0.7987" stop-color="#4A0074"/>
-		<stop  offset="1" stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_8_)" d="M118.43,53.94l0.4,11.89c0,0,6.97,1.53,0,6.11v11.59l-12.76,0.19c0,0,0.44,3.1-2.17,4.06
+	
+	<path fill="#A020F0" d="M118.43,53.94l0.4,11.89c0,0,6.97,1.53,0,6.11v11.59l-12.76,0.19c0,0,0.44,3.1-2.17,4.06
 		c0,0-3.22-0.59-2.63-3.77l-16.21-0.55l0.01-13.11C85.06,70.35,97.98,58.62,118.43,53.94z"/>
 	<g>
 		<path fill="#FFFFFF" d="M98.11,72.1c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
@@ -442,11 +537,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="98.9504" y1="100.3371" x2="135.8503" y2="100.3371">
-		<stop  offset="0" stop-color="#22006A"/>
-		<stop  offset="1" stop-color="#FF00A0"/>
-	</linearGradient>
-	<path fill="url(#SVGID_9_)" d="M99.4,85.32c0,0,0.17,4.11,4.12,4.02c3.95-0.09,4.59-3.64,4.59-3.64l10.83-0.08l0.02,9.51l12.1,0.52
+	
+	<path fill="#A020F0" d="M99.4,85.32c0,0,0.17,4.11,4.12,4.02c3.95-0.09,4.59-3.64,4.59-3.64l10.83-0.08l0.02,9.51l12.1,0.52
 		l0.32,7.43c0,0,4.51-0.04,4.47,3.36c-0.04,3.41-4.47,3.16-4.47,3.16l-0.32,5.74l-31.83,0.01l-0.02-11.16c0,0,2.61-0.81,2.75-4.26
 		c0,0,1.3-1.91-2.94-4.59l-0.07-10.02H99.4z"/>
 	<g>
@@ -469,11 +561,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="120.4697" y1="67.5855" x2="153.338" y2="67.5855">
-		<stop  offset="0"   stop-color="#FF00A0"/>
-		<stop  offset="1"   stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_10_)" d="M153.09,76.34c0,0-7.17-4.97-12.31,7.16l-2.01,0.01c0,0-5.87-10.31-11.26-0.24l-6.7,0.03
+
+	<path fill="#A020F0" d="M153.09,76.34c0,0-7.17-4.97-12.31,7.16l-2.01,0.01c0,0-5.87-10.31-11.26-0.24l-6.7,0.03
 		l-0.12-9.35c0,0,7.08-5.32-0.22-9.69l0.03-10.63c0,0,17.06-4.48,32.84,0.07L153.09,76.34z"/>
 	<g>
 		<path fill="#FFFFFF" d="M133.35,63.8c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
@@ -492,11 +581,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="155.3986" y1="71.2614" x2="189.3062" y2="71.2614">
-		<stop  offset="0"   stop-color="#FF00A0"/>
-		<stop  offset="1"   stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_11_)" d="M155.4,79.3c0,0,16.65,5.68,15.42,9.22l18.2-0.24l0.28-17.17c0,0-18.73-15.52-33.9-17.1L155.4,79.3
+	
+	<path fill="#A020F0" d="M155.4,79.3c0,0,16.65,5.68,15.42,9.22l18.2-0.24l0.28-17.17c0,0-18.73-15.52-33.9-17.1L155.4,79.3
 		z"/>
 	<g>
 		<path fill="#FFFFFF" d="M168.35,72.1c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
@@ -520,11 +606,8 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="173.5375" y1="95.8162" x2="215.99" y2="95.8162">
-		<stop  offset="0"  stop-color="#FF00A0"/>
-		<stop  offset="1"  stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_12_)" d="M180.56,115.24l15.04-0.01c0,0-0.62,4.33,2.52,3.98c3.14-0.34,3.36-3.85,3.36-3.85l14.44,0
+	
+	<path fill="#A020F0" d="M180.56,115.24l15.04-0.01c0,0-0.62,4.33,2.52,3.98c3.14-0.34,3.36-3.85,3.36-3.85l14.44,0
 		c0,0,2.76-15.92-24.33-42.97l-0.55,17.89l-17.49,1.36C173.54,91.65,180.54,97.82,180.56,115.24z"/>
 	<g>
 		<path fill="#FFFFFF" d="M192.11,99.42c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
@@ -546,11 +629,8 @@ style={{
   }}
 
 >
-	<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="182.2208" y1="132.1538" x2="221.187" y2="132.1538">
-		<stop  offset="0"  stop-color="#FF00A0"/>
-		<stop  offset="1"  stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_13_)" d="M216.56,117.51l0.95,3.29l0.93,11.52c0,0,0.74,3.41,2.31,4.04l0.44,6.32l-16.68,0.24
+	
+	<path fill="#A020F0" d="M216.56,117.51l0.95,3.29l0.93,11.52c0,0,0.74,3.41,2.31,4.04l0.44,6.32l-16.68,0.24
 		c0,0,0.08,4.46-3.37,4.31s-3.5-4.31-3.5-4.31l-15.41-0.01l-0.01-25.51l11.37-0.34c0,0,1.74,4.76,4.59,3.94c0,0,2.21,0.85,5-3.26
 		L216.56,117.51z"/>
 	<g>
@@ -572,14 +652,11 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="182.2318" y1="159.2675" x2="221.4897" y2="159.2675">
-		<stop  offset="0"  stop-color="#FF00A0"/>
-		<stop  offset="1"  stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_14_)" d="M221.49,169.05l-1.06,0.99l-13.37,0c0,0-0.17,4.4-2.79,4.07c-2.62-0.33-3.32-4.13-3.32-4.13
+
+	<path fill="#A020F0" d="M221.49,169.05l-1.06,0.99l-13.37,0c0,0-0.17,4.4-2.79,4.07c-2.62-0.33-3.32-4.13-3.32-4.13
 		l-13.35-0.2l0.13-10.61c0,0-0.97-3.75-5.46-4.02l-0.02-10.39l13.9-0.22c0,0,0.56,3.76,4.12,4.43s5.49-3.74,5.49-3.74l0.88-0.8
 		l14.55,0.34L221.49,169.05z"/>
-	<g>
+	<g onClick={() => setSelectedYear(2021)}>
 		<path fill="#FFFFFF" d="M196.81,156.74c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67V157h-1.34
 			v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V156.74z"/>
 		<path fill="#FFFFFF" d="M202.29,162.46c0,0.56-0.28,0.84-0.83,0.84h-2.86c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -597,13 +674,10 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="187.2518" y1="186.4925" x2="221.1772" y2="186.4925">
-		<stop  offset="0"  stop-color="#FF00A0"/>
-		<stop  offset="1"  stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_15_)" d="M221.15,197.1l-14.18,0.51c0,0-0.25,4.34-2.62,3.66c0,0-3.78,0.21-2.67-3.75l-13.75-0.22
+	
+	<path fill="#A020F0" d="M221.15,197.1l-14.18,0.51c0,0-0.25,4.34-2.62,3.66c0,0-3.78,0.21-2.67-3.75l-13.75-0.22
 		l-0.66-0.78l-0.01-24.12l1.41-0.36l9.9-0.4c0,0,1.28,3.94,5.12,4.25c3.84,0.31,5.09-3.86,5.09-3.86l12.41,0.07L221.15,197.1z"/>
-	<g>
+	<g onClick={() => setSelectedYear(2022)}>
 		<path fill="#FFFFFF" d="M197.2,185.7c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
 			v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V185.7z"/>
 		<path fill="#FFFFFF" d="M202.69,191.42c0,0.56-0.28,0.84-0.83,0.84H199c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -622,13 +696,12 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="187.558" y1="213.1999" x2="221.3943" y2="213.1999">
-		<stop  offset="0"  stop-color="#FF00A0"/>
-		<stop  offset="1"  stop-color="#22006A"/>
-	</linearGradient>
-	<path fill="url(#SVGID_16_)" d="M188.03,227.5l-0.47-28.33l11.73-0.08c0,0,1.12,3.65,4.61,4.1c0,0,3.5,0.12,4.83-4.12l11.8-0.17
+	
+	<path fill="#A020F0" d="M188.03,227.5l-0.47-28.33l11.73-0.08c0,0,1.12,3.65,4.61,4.1c0,0,3.5,0.12,4.83-4.12l11.8-0.17
 		l0.86,18.24c0,0-8.46,10.52-18.45,10.31S188.03,227.5,188.03,227.5z"/>
-	<g>
+	<g 
+  onClick={() => setSelectedYear(2023)}
+>
 		<path fill="#FFFFFF" d="M197.2,211.33c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
 			v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V211.33z"/>
 		<path fill="#FFFFFF" d="M202.69,217.05c0,0.56-0.28,0.84-0.83,0.84H199c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -648,13 +721,11 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="133.65" y1="213.3201" x2="177.9442" y2="213.3201">
-		<stop  offset="0.1011"  stop-color="#22006A"/>
-		<stop  offset="0.8519"  stop-color="#F0009C"/>
-	</linearGradient>
-	<path fill="url(#SVGID_17_)" d="M137.94,226.86l39.1,0.89l0.91-9.77l-26.2-18.86l-13.17-0.24l-0.58,13.14c0,0-4.28-0.28-4.34,3.14
+	
+	<path fill="#A020F0" d="M137.94,226.86l39.1,0.89l0.91-9.77l-26.2-18.86l-13.17-0.24l-0.58,13.14c0,0-4.28-0.28-4.34,3.14
 		c-0.05,3.42,4.29,2.98,4.29,2.98L137.94,226.86z"/>
-	<g>
+	<g
+  onClick={() => setSelectedYear(2024)}>
 		<path fill="#FFFFFF" d="M150.4,212.91c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71h-1.34
 			v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V212.91z"/>
 		<path fill="#FFFFFF" d="M155.89,218.63c0,0.56-0.28,0.84-0.83,0.84h-2.86c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -673,16 +744,11 @@ style={{
     transformOrigin: "center" // Ensures scaling happens from the center
   }}
 >
-	<linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="96.395" y1="213.2985" x2="131.1227" y2="213.2985">
-		<stop  offset="0"  stop-color="#22006A"/>
-		<stop  offset="0.7866"  stop-color="#F0009C"/>
-		<stop  offset="0.8649"  stop-color="#F0009C"/>
-		<stop  offset="0.9103"  stop-color="#F0009C"/>
-		<stop  offset="0.9319"  stop-color="#F0009C"/>
-	</linearGradient>
-	<path fill="url(#SVGID_18_)" d="M96.44,227.71l-0.04-28.38l14.46-0.19c0,0-0.41,4.26,5.04,6.04c0,0,5.55,1.16,6.33-6.26l13.26-0.05
+
+	<path fill="#A020F0" d="M96.44,227.71l-0.04-28.38l14.46-0.19c0,0-0.41,4.26,5.04,6.04c0,0,5.55,1.16,6.33-6.26l13.26-0.05
 		l0.78,0.05l0.12,11.22c0,0-5.17,1.64-4.49,5.35c0,0,0.05,3.42,3.68,4.59l0.8,0.29l-0.18,7.08L96.44,227.71z"/>
-	<g>
+	<g
+  onClick={() => setSelectedYear(2025)}>
 		<path fill="#FFFFFF" d="M110.11,212.91c0,0.29-0.1,0.61-0.3,0.96l-2.52,4.4h2.81v1.2h-4.45v-0.85l3.11-5.46v-1.69h-1.67v1.71
 			h-1.34v-2.04c0-0.55,0.28-0.83,0.84-0.83h2.69c0.56,0,0.84,0.28,0.84,0.83V212.91z"/>
 		<path fill="#FFFFFF" d="M115.6,218.63c0,0.56-0.28,0.84-0.83,0.84h-2.86c-0.54,0-0.81-0.28-0.81-0.84v-7.49
@@ -704,14 +770,35 @@ style={{
       <div className="alumni-details">
         {selectedYear ? (
           <>
-            <h2>Batch of {selectedYear}</h2>
+            <h2>Batch of {selectedYear-4}-{selectedYear}</h2>
             <div className="members-grid">
-              {alumniData[selectedYear].map((member, i) => (
-                <div key={i} className="member-card">
-                  <div className="member-avatar">{member.charAt(0)}</div>
-                  <div className="member-name">{member}</div>
-                </div>
-              ))}
+              {alumniData[selectedYear].map((member, i) => {
+                const photoSrc = member.photo ? photoImports[member.photo] : null;
+                
+                return (
+                  <div key={i} className="member-card">
+                    {photoSrc ? (
+                      <img 
+                        src={photoSrc}
+                        alt={member.name}
+                        className="member-photo"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.style.display = 'none';
+                          e.target.nextElementSibling.style.display = 'flex';
+                        }}
+                      />
+                    ) : null}
+                    <div 
+                      className="member-avatar"
+                      style={{ display: photoSrc ? 'none' : 'flex' }}
+                    >
+                      {member.name.charAt(0)}
+                    </div>
+                    <div className="member-name">{member.name}</div>
+                  </div>
+                );
+              })}
             </div>
           </>
         ) : (
