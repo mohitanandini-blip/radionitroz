@@ -3,9 +3,11 @@ import { useLocation } from 'react-router-dom';
 import './Sponsors.css';
 
 // Import sponsor images statically
+import jojo from './sponsors/jojo.jpg';
+import aditya from './sponsors/aditya.png';
 import sponsor1 from './sponsors/sponsor 1.jpeg';
 import sponsor2 from './sponsors/sponsor 2.jpg';
-import sponsor3 from './sponsors/sponsor 3.jpg';
+
 import sponsor4 from './sponsors/sponsor 4.jpg';
 import sponsor5 from './sponsors/sponsor 5.jpg';
 import sponsor6 from './sponsors/sponsor 6.jpeg';
@@ -24,8 +26,10 @@ import sponsor17 from './sponsors/sponsor 17.jpeg';
 // Define sponsors array
 const sponsors = [
   { id: 1, image: sponsor1, alt: 'Sponsor 1 logo' },
+  
+  {id: 18, image: aditya, alt: 'Sponsor 18 logo'},
   { id: 2, image: sponsor2, alt: 'Sponsor 2 logo' },
-  { id: 3, image: sponsor3, alt: 'Sponsor 3 logo' },
+  { id: 3, image: jojo, alt: 'Sponsor 3 logo' },
   { id: 4, image: sponsor4, alt: 'Sponsor 4 logo' },
   { id: 5, image: sponsor5, alt: 'Sponsor 5 logo' },
   { id: 6, image: sponsor6, alt: 'Sponsor 6 logo' },
