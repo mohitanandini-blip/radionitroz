@@ -10,8 +10,7 @@ import Alumni from './Alumni';
 import Preloader from './Preloader';
 import Footer from './Footer';
 import Team from './Team';
-import TestimonialSection from './TestimonialSection';
-import Feedback from './Feedback';
+
 
 function AppContent() {
   const [backgroundOpacity, setBackgroundOpacity] = useState(1);
@@ -87,14 +86,14 @@ function AppContent() {
                   <div ref={homeRef}>
                     <Home />
                     <Event />
-                    <TestimonialSection/>
+                   
                   </div>
                 </>
               } />
               <Route path="/team" element={<Team />} />
               <Route path="/alumni" element={<Alumni />} />
               <Route path="/sponsors" element={<Sponsors />} />
-              <Route path="/feedback" element={<Feedback/>} />
+       
             </Routes>
             <Footer />
           </main>

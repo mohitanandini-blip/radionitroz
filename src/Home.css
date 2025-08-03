@@ -119,7 +119,7 @@
 }
 
 .subtitle-typewriter {
-  font-size: 1rem;
+  font-size: 1.5rem;
  font-family: 'Space Mono', monospace;
   
   font-weight: 500 ;
@@ -302,7 +302,8 @@
   .share {
     font-size: 1.1rem;
   }
-
+.subtitle-typewriter {
+  font-size: 0.8rem;}
   .social-card {
     width: 60px;
     height: 60px;
