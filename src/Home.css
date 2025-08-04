@@ -121,7 +121,7 @@
 }
 
 .subtitle-typewriter {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: 'Space Mono', monospace;
 
   font-weight: 500;
@@ -130,7 +130,7 @@
   
   /*white-space: nowrap;
   overflow: hidden;*/
-  color: #ff6ec4;
+  color: #eb42a2;
 }
 
 .cursor {
