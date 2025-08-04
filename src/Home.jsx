@@ -7,7 +7,8 @@ const Home = () => {
   const [subtitleText, setSubtitleText] = useState("");
 
   const fullText = "Radio Nitroz";
-  const fullSubtitle = "Official Entertainment Club of NIT Durgapur";
+  const fullSubtitle = "\"Official Entertainment Club of NIT Durgapur\"";
+
 
   useEffect(() => {
     window.scrollTo(0, 0);

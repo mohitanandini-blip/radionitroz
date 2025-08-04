@@ -110,24 +110,32 @@ ul.contact-info {
   margin-top: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   /* Centers each item horizontally */
+   text-align: center;
+  gap: 0.8rem;
 }
 
 .contact-info li {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 1.5rem 1fr; /* Icon column and text column */
-  align-items: start;
+  display: flex;
+    flex-direction: column;
+  align-items: center;
   gap: 0.6rem;
-  margin-bottom: 0.8rem;
-  text-align: left;
+  
 }
 
 .contact-info svg {
   color: #f39c12;
   width: 1.25rem;
   height: 1.25rem;
-  margin-top: 0.15rem;
+ /* margin-top: 0.15rem;
   flex-shrink: 0;
   align-self: start;
+  */
 }
 
 
