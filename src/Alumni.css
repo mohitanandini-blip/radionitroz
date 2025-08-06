@@ -142,22 +142,7 @@
     -6px -6px 12px rgba(255, 255, 255, 0.15);
 }
 
-.member-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(75, 9, 167, 0.8), rgba(212, 49, 160, 0.8));
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  box-shadow: 
-    4px 4px 8px rgba(0, 0, 0, 0.2),
-    -4px -4px 8px rgba(255, 255, 255, 0.1);
-  margin-bottom: 10px;
-}
+
 
 .member-name {
   font-size: 0.85rem;
@@ -181,8 +166,8 @@
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   }
   
-  .member-photo,
-  .member-avatar {
+  .member-photo
+   {
     width: 100px;
     height: 100px;
     font-size: 1.3rem;
@@ -207,8 +192,7 @@
     padding: 0.8rem;
   }
   
-  .member-photo,
-  .member-avatar {
+  .member-photo{
     width: 90px;
     height: 90px;
     font-size: 1.2rem;
@@ -225,8 +209,7 @@
     gap: 0.6rem;
   }
   
-  .member-photo,
-  .member-avatar {
+  .member-photo{
     width: 80px;
     height: 80px;
     font-size: 1rem;

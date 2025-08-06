@@ -789,12 +789,7 @@ style={{
                         }}
                       />
                     ) : null}
-                    <div 
-                      className="member-avatar"
-                      style={{ display: photoSrc ? 'none' : 'flex' }}
-                    >
-                      {member.name.charAt(0)}
-                    </div>
+                   
                     <div className="member-name">{member.name}</div>
                   </div>
                 );
