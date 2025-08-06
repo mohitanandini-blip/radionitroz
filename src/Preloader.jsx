@@ -7,7 +7,7 @@ const Preloader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); // Match this with your animation duration (8s)
+    }, 1000); // Match this with your animation duration (8s)
 
     return () => clearTimeout(timer);
   }, []);
