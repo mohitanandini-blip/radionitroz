@@ -1,85 +1,51 @@
-
 .footer {
-  /* Modified gradient - darker and more opaque to distinguish from main content */
-  padding: 1.5rem 0 0 ;
-
-background: linear-gradient(
-  135deg,
-  rgba(84, 14, 28, 0.3) 0%,     /* #540e1c with 30% opacity */
-  rgba(22, 2, 53, 0.35) 50%,    /* #160235 with 35% opacity */
-  rgba(0, 0, 0, 0.4) 100%       /* black with 40% opacity */
-);
-/* subtle used*/
- /* background: linear-gradient(
-  135deg,
-  rgba(84, 14, 28, 0.4) 0%,    
-  rgba(22, 2, 53, 0.45) 50%,  
-  rgba(0, 0, 0, 0.5) 100%      
-); mild */
+  background: linear-gradient(135deg, rgba(20, 20, 30, 0.95), rgba(5, 5, 15, 0.98));
   color: #ecf0f1;
-  padding: 2rem 0 0;
-  font-family: 'Arial', sans-serif;
- 
+  padding: 2rem 1rem 0;
+  font-family: 'Segoe UI', sans-serif;
   position: relative;
-  z-index: 10; /* Ensure it sits above other content */
 }
-/* Add this to create a subtle transition effect above the footer */
 
-/* Rest of your existing CSS remains the same */
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-
-.footer-section {
-  margin-bottom: 1rem;
+  margin: auto;
 }
 
 .footer-section h3 {
-  color: #f39c12;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
   position: relative;
-  padding-bottom: 0.5rem;
 }
-
 .footer-section h3::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -4px;
   width: 50px;
   height: 2px;
-  background-color: #f39c12;
-}
-
-.footer-section p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  background: #00d4ff;
 }
 
 .footer-section ul {
   list-style: none;
   padding: 0;
 }
-
 .footer-section ul li {
   margin-bottom: 0.5rem;
+  color: #bdc3c7;
 }
-
 .footer-section ul li a {
   color: #bdc3c7;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
-
 .footer-section ul li a:hover {
-  color: #f39c12;
+  color: #00d4ff;
+  text-shadow: 0 0 8px #00d4ff;
 }
 
 .social-icons {
@@ -87,115 +53,95 @@ background: linear-gradient(
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .social-icons a {
   color: #ecf0f1;
-  font-size: 1.5rem;
-  transition: color 0.3s;
+  font-size: 1.6rem;
+  transition: transform 0.3s, color 0.3s;
 }
-
 .social-icons a:hover {
-  color: #f39c12;
-}
-.contact-section {
-  margin-bottom: 1rem;
-  text-align: left;
+  color: #00d4ff;
+  transform: scale(1.15);
 }
 
-.contact-section h3 {
-  margin-bottom: 0.5rem;
-}
 
-ul.contact-info {
-  margin-top: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-   align-items: center;
-   /* Centers each item horizontally */
-   text-align: center;
-  gap: 0.8rem;
+.contact-info {
+    padding: 0;
+    list-style: none;
+    margin-top: 5px;
+}
+.contact-info {
+    padding: 0;
+    list-style: none;
+    margin-top: 5px;
 }
 
 .contact-info li {
-  /*display: grid;
-  grid-template-columns: 1.5rem 1fr; /* Icon column and text column */
-  display: flex;
-    flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  
-}
-
-.contact-info svg {
-  color: #f39c12;
-  width: 1.25rem;
-  height: 1.25rem;
- /* margin-top: 0.15rem;
-  flex-shrink: 0;
-  align-self: start;
-  */
+    
+    align-items: left;  /* vertically center emoji with text */
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
 }
 
 
-.map-container {
-  position: relative;
-  padding-bottom: 75%;
-  height: 0;
-  overflow: hidden;
-}
 
-.map-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 5px;
+.key-contacts-section .contact-card {
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.key-contacts-section .contact-card p {
+  margin-bottom: 0.8rem;
+  color: #bdc3c7;
 }
 
 .footer-bottom {
-  background: linear-gradient(
-  135deg,
-  rgba(84, 14, 28, 0.05) 0%,    /* 15% opacity */
-  rgba(22, 2, 53, 0.2) 50%,     /* 20% opacity */
-  rgba(0, 0, 0, 0.25) 100%     /* 25% opacity */
-);
-  padding: 1rem 0;
   text-align: center;
+  padding: 1rem;
   margin-top: 2rem;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: #bdc3c7;
   font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-bottom p {
+  color: #999;
+}
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.5rem 2rem; /* row-gap column-gap */
+  list-style: none;
+  padding: 0;
 }
 
+.quick-links li {
+  margin: 0;
+}
 
-/* Responsive adjustments */
+.quick-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.quick-links a:hover {
+  color: #00d4ff;
+  text-shadow: 0 0 8px #00d4ff;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
-
 @media (max-width: 480px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-  
   .footer-section {
     text-align: center;
   }
-  
   .footer-section h3::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
   .social-icons {
     justify-content: center;
   }

@@ -22,7 +22,7 @@ import raj from "../src/assets/images/4th_yr/raj.jpg";
 import anshul from "../src/assets/images/4th_yr/anshul.jpeg";
 import mmss from "../src/assets/images/4th_yr/mmss.jpeg";
 import shankar from "../src/assets/images/4th_yr/shankar.jpg";
-import touf from "../src/assets/images/4th_yr/touf.jpeg";
+import touf from "../src/assets/images/4th_yr/touf.jpg";
 import rishita from "../src/assets/images/4th_yr/rish.jpg";
 import deepsika from "../src/assets/images/4th_yr/deep.jpg";
 import sanjib from "../src/assets/images/4th_yr/sanjib.jpeg";
@@ -94,7 +94,17 @@ const members = {
       phone: "+918328078950",
       email: "dss.22u10257@btech.nitdgp.ac.in",
     },
+   
     {
+      name: "Mohammed Asif",
+      photo: asif,
+      post: "General Secretary",
+      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/md-asif-22891a264/",
+      phone: "+918967290251",
+      email: "ma.22u10143@btech.nitdgp.ac.in",
+    },
+     {
       name: "Sk Raj Ali",
       photo: raj,
       post: "Vice President",
@@ -104,13 +114,13 @@ const members = {
       email: "sra.22u10074@btech.nitdgp.ac.in",
     },
     {
-      name: "Mohammed Asif",
-      photo: asif,
-      post: "General Secretary",
-      instagram: "#",
-      linkedin: "https://www.linkedin.com/in/md-asif-22891a264/",
-      phone: "+918967290251",
-      email: "ma.22u10143@btech.nitdgp.ac.in",
+      name: "Anshul Kumar Parira",
+      photo: anshul,
+      post: "Treasurer",
+      instagram: "https://www.instagram.com/anshul.parira/profilecard/?igsh=MTE2eDEzbTlzdDE4Yg==",
+      linkedin: "https://www.linkedin.com/in/anshul-kumar-parira-684474277/",
+      phone: "+917488898308",
+      email: "akp.22u10045@btech.nitdgp.ac.in",
     },
     {
       name: "Jayant Mandal",
@@ -148,15 +158,7 @@ const members = {
       phone: "+918977025556",
       email: "kk.22u10186@btech.nitdgp.ac.in",
     },
-    {
-      name: "Anshul Kumar",
-      photo: anshul,
-      post: "Treasurer",
-      instagram: "https://www.instagram.com/anshul.parira/profilecard/?igsh=MTE2eDEzbTlzdDE4Yg==",
-      linkedin: "https://www.linkedin.com/in/anshul-kumar-parira-684474277/",
-      phone: "+917488898308",
-      email: "akp.22u10045@btech.nitdgp.ac.in",
-    },
+    
     {
       name: "Md Toufeeque khan",
       photo: touf,
@@ -213,7 +215,7 @@ const members = {
       email: "sm.22u10065@btech.nitdgp.ac.in",
     },
     {
-      name: "Pranesh Rao K",
+      name: "K Pranesh Rao",
       photo: pranesh,
       post: "Operations Head",
       instagram: "#",
