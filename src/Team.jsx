@@ -249,25 +249,25 @@ const members = {
       linkedin: "https://www.linkedin.com/in/rishita-sivala-459bbb261/",
       phone: "+919063462911",
       email: "sr.22u10422@btech.nitdgp.ac.in",
-    },
-    {
-      name: "Sarmistha Naskar",
-      photo: sarmistha,
-      post: "Senior Coordinator",
-      instagram: "#",
-      linkedin: "https://www.linkedin.com/in/sarmistha-naskar-004a38269/",
-      phone: "+916289762949",
-      email: "sn.22u10023@btech.nitdgp.ac.in",
-    },
-    {
+    },{
       name: "Harshada Pawar",
       photo: harshada,
-      post: "Senior Coordinator",
+      post: "Ideation Head",
       instagram: "#",
       linkedin: "https://www.linkedin.com/in/harshada-pawar-449b80374/",
       phone: "+919356704880",
       email: "phv.22u10357@btech.nitdgp.ac.in",
     },
+    {
+      name: "Sarmistha Naskar",
+      photo: sarmistha,
+      post: "corporate communication head",
+      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/sarmistha-naskar-004a38269/",
+      phone: "+916289762949",
+      email: "sn.22u10023@btech.nitdgp.ac.in",
+    },
+    
   ],
   thirdYear: [
     {

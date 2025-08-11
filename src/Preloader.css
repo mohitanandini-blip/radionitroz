@@ -21,7 +21,7 @@
   fill: none;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw 1s linear forwards;
+  animation: draw 2s linear forwards;
 }
 
 .preloader-path.aqua {

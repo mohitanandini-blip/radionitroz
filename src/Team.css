@@ -156,10 +156,22 @@
   padding: 0 1rem;
  
 }
-.card-grid:has(.card:only-child) {
+.card-grid:has(.card:only-child){
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  
+}
+.card-grid:has(.card:only-child) .contact-info .social-links .social-icon .icon {
+  /* Example properties */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.card-grid:has(.card:only-child) .contact-info .social-links{
+  /* Example properties */
+  
+  margin-bottom: 10px;
 }
 .card {
   position: relative;
@@ -321,6 +333,7 @@
   color: var(--primary);
   margin-right: 0.8rem;
   font-size: 1rem;
+  
 }
 
 .contact-link {
@@ -341,6 +354,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  
   display: flex;
   align-items: center;
   justify-content: center;
