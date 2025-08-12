@@ -1,25 +1,25 @@
 import { useRef, useEffect, useState } from "react";
 import "./Event.css";
-import bgVideo from "./events/videoplayback (1).mp4";
-import glamitUp from "./events/rampwalk.jpeg";
-import mrn from "./events/mrn.jpg";
-import talentX from "./events/talentx.jpeg";
-import rhythmicMoment from "./events/Rhythmic moments.jpeg";
-import comedyNight from "./events/comedynight.jpeg";
-import movieMystic from "./events/moviem.jpeg";
-import nexusVerse from "./events/NV.jpg";
-import voiceItUp from "./events/Vo.jpg";
-import limelight from "./events/rampwalk.jpeg";
-import redfmCollab from "./events/REDFM.jpg";
-import matkiFod from "./events/MFD.jpg";
-import kholeDil from "./events/kholedl.jpeg";
-import nds from "./events/nds.jpeg";
-import ss from "./events/success_stories.jpeg";
-import prank from "./events/prank.jpeg";
-import ks from "./events/Ks.jpeg";
-import freshers_intro from "./events/freshers_intro.jpeg";
-import kj from "./events/kj.jpeg";
-import des from "./events/des.jpeg";
+import bgVideo from "/assets/videoplayback (1).mp4";
+import glamitUp from "/assets/events/rampwalk.jpeg";
+import mrn from "/assets/events/mrn.jpg";
+import talentX from "/assets/events/talentx.jpeg";
+import rhythmicMoment from "/assets/events/Rhythmic moments.jpeg";
+import comedyNight from "/assets/events/comedynight.jpeg";
+import movieMystic from "/assets/events/moviem.jpeg";
+import nexusVerse from "/assets/events/NV.jpg";
+import voiceItUp from "/assets/events/Vo.jpg";
+import limelight from "/assets/events/rampwalk.jpeg";
+import redfmCollab from "/assets/events/REDFM.jpg";
+import matkiFod from "/assets/events/MFD.jpg";
+import kholeDil from "/assets/events/kholedl.jpeg";
+import nds from "/assets/events/nds.jpeg";
+import ss from "/assets/events/success_stories.jpeg";
+import prank from "/assets/events/prank.jpeg";
+import ks from "/assets/events/Ks.jpeg";
+import freshers_intro from "/assets/events/freshers_intro.jpeg";
+import kj from "/assets/events/kj.jpeg";
+import des from "/assets/events/des.jpeg";
 
 const festCards = [
   { id: 1, image: glamitUp, title: "Glamit Up" },
