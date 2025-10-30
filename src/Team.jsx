@@ -4,7 +4,8 @@ import "./Team.css";
 import { FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
 
 // Faculty images
-import Tushar from "/assets/images/faculty/TusharKanti.jpeg";
+import santanu from "/assets/images/faculty/santanu.jpg";
+import soumya from "/assets/images/faculty/soumya.jpg";
 
 // 4th Year images
 import jayantmandal from "/assets/images/4th_yr/Jayant.jpg";
@@ -75,13 +76,22 @@ import ishita from "/assets/images/2nd_year/ishita.jpg";
 const members = {
   faculty: [
     {
-      name: "Dr Tushar Kanti Bera",
-      photo: Tushar,
+      name: "Mr. Santanu Paul",
+      photo: santanu,
       post: "Faculty Advisor",
       instagram: "#",
       linkedin: "#",
-      phone: "+919448853308",
-      email: "tusharkanti.bera@ee.nitdgp.ac.in ",
+      phone: "+917866878248",
+      email: "spaul.ee@nitdgp.ac.in",
+    },
+     {
+      name: "Mr. Soumya Chatterjee",
+      photo: soumya,
+      post: "Faculty Advisor",
+      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/soumya-chatterjee-716706237",
+      phone: "+919051016652",
+      email: " schatterjee.ee@nitdgp.ac.in",
     },
   ],
   fourthYear: [
