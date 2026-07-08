@@ -50,144 +50,53 @@ const videoSeriesCards = [
 ];
 
 const Carousel = ({ title, items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const carouselRef = useRef(null);
-  const isDraggingRef = useRef(false);
-  const startXRef = useRef(0);
-  const rotationIntervalRef = useRef(null);
 
-  const handleRadioChange = (index) => {
-    setActiveIndex(index);
-    resetAutoRotation();
-  };
-
-  const resetAutoRotation = () => {
-    if (rotationIntervalRef.current) {
-      clearInterval(rotationIntervalRef.current);
-    }
-    rotationIntervalRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % items.length);
-    }, 3000);
-  };
-
-  const handleMouseDown = (e) => {
-    isDraggingRef.current = true;
-    startXRef.current = e.clientX;
-    if (rotationIntervalRef.current) {
-      clearInterval(rotationIntervalRef.current);
-    }
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDraggingRef.current) return;
-    const deltaX = e.clientX - startXRef.current;
-    if (Math.abs(deltaX) > 50) {
-      const direction = deltaX > 0 ? -1 : 1;
-      setActiveIndex((prev) => (prev + direction + items.length) % items.length);
-      startXRef.current = e.clientX;
-    }
-  };
-
-  const handleMouseUp = () => {
-    isDraggingRef.current = false;
-    resetAutoRotation();
-  };
-
-  useEffect(() => {
-    resetAutoRotation();
-    return () => {
-      if (rotationIntervalRef.current) {
-        clearInterval(rotationIntervalRef.current);
-      }
-    };
-  }, [items.length]);
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.addEventListener('mousedown', handleMouseDown);
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
-    }
-    return () => {
-      if (carousel) {
-        carousel.removeEventListener('mousedown', handleMouseDown);
-      }
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, []);
+  // Duplicate cards for seamless looping
+  const cards = [...items, ...items];
 
   return (
-    <div className="carousel-section">
-      <div className="section-header">
-        <h2 className="section-title">{title}</h2>
-        <div className="radio-controls">
-          {items.map((_, index) => (
-            <label key={index} className="radio-label">
-              <input
-                type="radio"
-                name={`carousel-${title}`}
-                checked={activeIndex === index}
-                onChange={() => handleRadioChange(index)}
-              />
-              <span className="radio-custom"></span>
-            </label>
-          ))}
-        </div>
-      </div>
-      <div className="carousel-container">
-        <div 
-          className="carousel-wheel" 
-          ref={carouselRef}
-        >
-          {items.map((item, index) => {
-            const offset = (index - activeIndex + items.length) % items.length;
-            let transform = '';
-            let zIndex = 0;
-            let opacity = 1;
-            
-            if (offset === 0) {
-              transform = 'translateX(0) scale(1)';
-              zIndex = 5;
-            } else if (offset === 1 || offset === items.length - 1) {
-              const direction = offset === 1 ? 1 : -1;
-              transform = `translateX(${direction * 80}%) scale(0.9)`;
-              zIndex = 4;
-              opacity = 0.8;
-            } else if (offset === 2 || offset === items.length - 2) {
-              const direction = offset === 2 ? 1 : -1;
-              transform = `translateX(${direction * 130}%) scale(0.7)`;
-              zIndex = 3;
-              opacity = 0.6;
-            } else {
-              transform = 'translateX(0) scale(0)';
-              zIndex = 0;
-              opacity = 0;
-            }
+    <section className="carousel-section">
 
-            return (
-              <div
-                key={item.id}
-                className={`carousel-item ${offset === 0 ? 'active' : ''}`}
-                style={{ 
-                  transform,
-                  zIndex,
-                  opacity,
-                  transition: 'all 0.5s ease-out'
-                }}
-                onClick={() => handleRadioChange(index)}
-              >
-                <img src={item.image} alt={item.title} />
-                <div className="carousel-caption">{item.title}</div>
+      <h2 className="section-title">
+        {title}
+      </h2>
+
+      <div className="coverflow-wrapper">
+
+        <div className="coverflow-track">
+
+          {cards.map((item, index) => (
+
+            <div
+              className="coverflow-card"
+              key={`${item.id}-${index}`}
+            >
+
+              <div className="coverflow-image">
+
+                <img
+                  src={item.image}
+                  alt={item.title}
+                />
+
               </div>
-            );
-          })}
+
+              <div className="coverflow-title">
+                {item.title}
+              </div>
+
+            </div>
+
+          ))}
+
         </div>
+
       </div>
-    </div>
+
+    </section>
   );
 };
+
 
 const Event = () => (
   <div className="event-container">
