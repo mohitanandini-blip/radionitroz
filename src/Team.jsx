@@ -14,7 +14,7 @@ import anth from "/assets/images/4th_yr/anth.jpg";
 import anurag from "/assets/images/4th_yr/anurag.jpg";
 import bashu from "/assets/images/4th_yr/bashu.jpg";
 import bhav from "/assets/images/4th_yr/bhav.jpg";
-import darshit from "/assets/images/4th_yr/darshit.jpg";
+import darshit from "/assets/images/4th_yr/darshit.jpeg";
 import debasmitaSaha from "/assets/images/4th_yr/DebasmitaSaha.jpg";
 import gopeshwar from "/assets/images/4th_yr/Gopeshwar.jpg";
 import mmk from "/assets/images/4th_yr/mmk.jpg";
@@ -58,7 +58,6 @@ import swatchata from "/assets/images/2nd_yr/swatchatha.jpeg";
 import trisha from "/assets/images/2nd_yr/trisha.jpeg";
 import kuldeep from "/assets/images/2nd_yr/kuldeep.jpeg";
 import tarak from "/assets/images/2nd_yr/tarak.jpeg";
-import roshani from "/assets/images/2nd_yr/roshani.jpeg";
 import mohitha from "/assets/images/2nd_yr/nandini.jpeg";
 import hasini from "/assets/images/2nd_yr/hasini.jpeg";
 import dinesh from "/assets/images/2nd_yr/dinesh.jpeg";
@@ -106,7 +105,7 @@ const members = {
       email: "sayantanbanerjee2022@gmail.com",
     },
     {
-      name: "Darshit R",
+      name: "Darshit Rawal",
       photo: darshit,
       post: "Vice President",
       instagram: "https://www.instagram.com/itsme_amanshaw/",
@@ -521,15 +520,6 @@ const members = {
       linkedin:"https://www.linkedin.com/in/tarak-jigireddy-8875ba414?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       phone:"+919866734442",
       email: "tarakjigireddy05@gmail.com",
-    },
-    {
-      name: "Roshani Ratre",
-      photo: roshani,
-      domain: "Content Writing",
-      instagram: "#",
-      linkedin: "#",
-      phone:"+918770682928",
-      email: "roshaniratreme@gmail.com",
     },
     {
       name: "Mohitha Nandini",
